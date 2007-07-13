@@ -14,7 +14,7 @@ Source0:	%{name}-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildrootroot
 Requires:	pango atk gtk+2.0
 Requires:	anthy >= 6300
-BuildRequires:	pango-devel atk-devel gtk+2-devel anthy-devel ImageMagick
+BuildRequires:	pango-devel atk-devel gtk+2-devel anthy-devel ImageMagick desktop-file-utils
 
 %description
 A tool for managing Anthy's dictionary.
