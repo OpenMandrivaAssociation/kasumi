@@ -14,7 +14,7 @@ Source0:	%{name}-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildrootroot
 Requires:	pango atk gtk+2.0
 Requires:	anthy >= 6300
-BuildRequires:	pango-devel atk-devel gtk+2-devel anthy-devel
+BuildRequires:	pango-devel atk-devel gtk+2-devel anthy-devel ImageMagick
 
 %description
 A tool for managing Anthy's dictionary.
@@ -30,6 +30,10 @@ A tool for managing Anthy's dictionary.
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
+# icons
+mkdir -p $RPM_BUILD_ROOT/%{_iconsdir}/hicolor/{16x16,32x32}/apps
+cp $RPM_BUILD_ROOT/%{_datadir}/pixmaps/%{name}.png $RPM_BUILD_ROOT/%{_iconsdir}/hicolor/32x32/apps/%{name}.png
+convert -scale 16 $RPM_BUILD_ROOT/%{_datadir}/pixmaps/%{name}.png $RPM_BUILD_ROOT/%{_iconsdir}/hicolor/16x16/apps/%{name}.png
 %find_lang %{name}
 
 # menu
@@ -40,9 +44,11 @@ desktop-file-install	--vendor="" \
 
 %post
 %update_menus
+%update_icon_cache hicolor
 
 %postun
 %clean_menus
+%clean_icon_cache hicolor
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -53,6 +59,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/*
 %{_datadir}/applications/kasumi.desktop
 %{_datadir}/pixmaps/*.png
+%{_iconsdir}/hicolor/32x32/apps/%{name}.png
+%{_iconsdir}/hicolor/16x16/apps/%{name}.png
 %{_mandir}/man1/kasumi.1*
-%{_menudir}/%{name}
-
