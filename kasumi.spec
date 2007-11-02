@@ -1,5 +1,5 @@
 %define	name	kasumi
-%define	version	2.2
+%define	version	2.3
 %define	release	%mkrel 1
 %define	Summary	A tool for managing Anthy's dictionary
 
@@ -10,9 +10,9 @@ Release:	%{release}
 Group:		System/Internationalization
 License:	GPL
 URL:		http://kasumi.sourceforge.jp/
-Source0:	%{name}-%{version}.tar.gz
+Source0:	http://osdn.dl.sourceforge.jp/%{name}/27825/%{name}-%{version}.tar.gz
+Patch0:		kasumi-2.3-fix-desktop-file.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildrootroot
-Requires:	pango atk gtk+2.0
 Requires:	anthy >= 6300
 BuildRequires:	pango-devel atk-devel gtk+2-devel anthy-devel ImageMagick desktop-file-utils
 
@@ -21,6 +21,7 @@ A tool for managing Anthy's dictionary.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %configure2_5x
@@ -59,6 +60,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/*
 %{_datadir}/applications/kasumi.desktop
 %{_datadir}/pixmaps/*.png
-%{_iconsdir}/hicolor/32x32/apps/%{name}.png
-%{_iconsdir}/hicolor/16x16/apps/%{name}.png
+%{_iconsdir}/hicolor/*/apps/%{name}.png
 %{_mandir}/man1/kasumi.1*
