@@ -12,6 +12,7 @@ License:	GPL
 URL:		http://kasumi.sourceforge.jp/
 Source0:	http://osdn.dl.sourceforge.jp/%{name}/27825/%{name}-%{version}.tar.gz
 Patch0:		kasumi-2.3-fix-desktop-file.patch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildrootroot
 Requires:	anthy >= 6300
 BuildRequires:	pango-devel atk-devel gtk+2-devel anthy-devel ImageMagick desktop-file-utils
 
