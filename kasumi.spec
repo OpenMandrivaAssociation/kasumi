@@ -15,7 +15,7 @@ BuildRequires:	pango-devel
 BuildRequires:	atk-devel
 BuildRequires:	gtk+2-devel
 BuildRequires:	anthy-devel
-BuildRequires:	ImageMagick
+BuildRequires:	imagemagick
 BuildRequires:	desktop-file-utils
 
 %description
