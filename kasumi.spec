@@ -1,14 +1,12 @@
 Summary:	A tool for managing Anthy's dictionary
 Name:		kasumi
-Version:	2.3
-Release:	%{mkrel 3}
+Version:	2.4
+Release:	%{mkrel 1}
 Group:		System/Internationalization
 License:	GPLv2+
-URL:		http://kasumi.sourceforge.jp/
-Source0:	http://osdn.dl.sourceforge.jp/%{name}/27825/%{name}-%{version}.tar.gz
+URL:		http://sourceforge.jp/projects/kasumi
+Source0:	http://iij.dl.sourceforge.jp/kasumi/37311/%name-%version.tar.gz
 Patch0:		kasumi-2.3-fix-desktop-file.patch
-# Fix build with GCC 4.3 (includes) - AdamW 2008/12 from Debian
-Patch1:		04_gcc4.3fix-mandriva.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildrootroot
 Requires:	anthy >= 6300
 BuildRequires:	pango-devel
@@ -24,7 +22,6 @@ A tool for managing Anthy's dictionary.
 %prep
 %setup -q
 %patch0 -p0
-%patch1 -p1 -b .gcc43
 
 %build
 %configure2_5x
