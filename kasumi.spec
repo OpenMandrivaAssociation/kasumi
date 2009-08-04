@@ -1,6 +1,6 @@
 Summary:	A tool for managing Anthy's dictionary
 Name:		kasumi
-Version:	2.4
+Version:	2.5
 Release:	%{mkrel 1}
 Group:		System/Internationalization
 License:	GPLv2+
