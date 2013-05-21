@@ -1,5 +1,5 @@
---- kasumi.desktop.in.orig	2007-11-03 03:07:17.000000000 +0800
-+++ kasumi.desktop.in	2007-11-03 03:08:38.000000000 +0800
+--- ./kasumi.desktop.in.orig	2007-11-03 03:07:17.000000000 +0800
++++ ./kasumi.desktop.in	2007-11-03 03:08:38.000000000 +0800
 @@ -1,6 +1,5 @@
  [Desktop Entry]
  Version=1.0
