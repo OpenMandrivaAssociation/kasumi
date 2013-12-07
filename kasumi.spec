@@ -1,7 +1,7 @@
 Summary:	A tool for managing Anthy's dictionary
 Name:		kasumi
 Version:	2.5
-Release:	7
+Release:	8
 Group:		System/Internationalization
 License:	GPLv2+
 Url:		http://sourceforge.jp/projects/kasumi
