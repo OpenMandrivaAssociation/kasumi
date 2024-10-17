@@ -4,7 +4,7 @@ Version:	2.5
 Release:	14
 Group:		System/Internationalization
 License:	GPLv2+
-Url:		http://sourceforge.jp/projects/kasumi
+Url:		https://sourceforge.jp/projects/kasumi
 Source0:	http://iij.dl.sourceforge.jp/kasumi/37311/%{name}-%{version}.tar.gz
 Patch0:		kasumi-2.3-fix-desktop-file.patch
 
