@@ -8,6 +8,11 @@ Url:		https://sourceforge.jp/projects/kasumi
 Source0:	http://iij.dl.sourceforge.jp/kasumi/37311/%{name}-%{version}.tar.gz
 Patch0:		kasumi-2.3-fix-desktop-file.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	desktop-file-utils
 BuildRequires:	imagemagick
 BuildRequires:	pkgconfig(anthy)
